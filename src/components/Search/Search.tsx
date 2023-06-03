@@ -1,33 +1,29 @@
 import { Search2Icon } from "@chakra-ui/icons";
-import { Input, InputLeftElement, InputGroup } from "@chakra-ui/react";
-import axios from "axios";
-import { useQuery } from "react-query";
-import { GET_CONTENT_CARDS } from "./query";
+import { Input, InputLeftElement, InputGroup, Spinner } from "@chakra-ui/react";
 import { useState } from "react";
 
-interface props {
+interface propsSearchData {
   onSearch: (searchTerm: string) => void;
 }
 
-const apiEndPoint = "https://api.tigerhall.net/v2/";
-
-const Search = ({ onSearch }: props) => {
-  const [loading, setLoading] = useState(false);
-
-  const handleSearch = async (searchTerm: string) => {};
+const Search = ({ onSearch }: propsSearchData) => {
+  const handleSearchData = () => {};
 
   return (
     <>
       <InputGroup bg="brand.900">
         <InputLeftElement>
-          <Search2Icon color="gray.100" mt={2} />
+          <Search2Icon color="white" mt={2} />
         </InputLeftElement>
         <Input
           type="text"
           size="lg"
+          placeholder=""
           borderRadius={4}
-          color="gray.300"
-          onChange={(e) => handleSearch(e.target.value)}
+          borderColor="gray.700"
+          color="white"
+          focusBorderColor="gray.700"
+          onChange={handleSearchData}
         />
       </InputGroup>
     </>

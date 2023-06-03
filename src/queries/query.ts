@@ -1,8 +1,8 @@
-export const GET_CONTENT_CARDS = `
-  query GetContentCards($searchTerm: String!) {
-    contentCards(
-      filter: { limit: 20, keywords: $searchTerm, types: ["PODCAST"] }
-    ) {
+import { gql } from "@apollo/client";
+
+export const queryPodCasts = () => gql`
+  query GetContentCards($keywords: String) {
+    contentCards(filter: { limit: 20, keywords: $keywords, types: [PODCAST] }) {
       edges {
         ... on Podcast {
           name
