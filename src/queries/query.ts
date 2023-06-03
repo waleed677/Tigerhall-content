@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-export const queryPodCasts = () => gql`
+export const GET_CONTENT_CARDS = gql`
   query GetContentCards($keywords: String) {
     contentCards(filter: { limit: 20, keywords: $keywords, types: [PODCAST] }) {
       edges {
