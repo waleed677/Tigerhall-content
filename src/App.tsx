@@ -1,8 +1,9 @@
 import { Container } from "@chakra-ui/react";
 import Home from "./pages/Home";
-import theme from "./styles/Theme";
+import theme from "./styles/theme";
 import { ChakraProvider } from "@chakra-ui/react";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import "./styles/App.css";
 
 const client = new ApolloClient({
   uri: "https://api.tigerhall.net/v2/",

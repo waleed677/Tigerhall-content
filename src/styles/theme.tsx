@@ -8,6 +8,9 @@ const theme = extendTheme({
       },
     },
   },
+  fonts: {
+    body: `NeueMontreal-Regular,`,
+  },
   colors: {
     brand: {
       700: "#797670",
