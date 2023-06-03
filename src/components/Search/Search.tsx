@@ -1,13 +1,15 @@
 import { Search2Icon } from "@chakra-ui/icons";
 import { Input, InputLeftElement, InputGroup, Spinner } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useCallback, ChangeEvent } from "react";
 
 interface propsSearchData {
   onSearch: (searchTerm: string) => void;
 }
 
 const Search = ({ onSearch }: propsSearchData) => {
-  const handleSearchData = () => {};
+  const handleSearchData = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    onSearch(e.target.value);
+  }, []);
 
   return (
     <>
