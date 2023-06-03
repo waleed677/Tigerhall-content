@@ -4,6 +4,8 @@ import Search from "../../components/Search";
 import { debounce } from "lodash";
 import { useQuery } from "@apollo/client";
 import { GET_CONTENT_CARDS } from "../../queries/query";
+import Loader from "../../components/Loader";
+import ErrorAlert from "../../components/ErrorAlert";
 
 const Home = () => {
   const [keyword, setKeyword] = useState("");
@@ -26,6 +28,17 @@ const Home = () => {
   return (
     <>
       <Search onSearch={handleSearchQuery} />
+
+      {/* Show Loader */}
+      {loading && <Loader />}
+
+      {/* No Data Found */}
+      {!loading && edges.length === 0 && <ErrorAlert message="No Data Found" />}
+
+      {/* Error Occurred */}
+      {!loading && error && (
+        <ErrorAlert message="Sorry, There is something wrong with your API call" />
+      )}
     </>
   );
 };
