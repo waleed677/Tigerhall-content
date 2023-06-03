@@ -8,6 +8,12 @@ const Theme = extendTheme({
       },
     },
   },
+  colors: {
+    brand: {
+      700: "#797670",
+      900: "#383733",
+    },
+  },
 });
 
 export default Theme;
