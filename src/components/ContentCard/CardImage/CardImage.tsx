@@ -53,22 +53,9 @@ const CardImage = ({ imageURL }: ICardImage) => {
           bg="orange.600"
           textAlign="center"
         ></Box>
+
+        {/* Publish Time Component */}
         <ContentPublishedTime publishedAt={imageURL.publishedAt} />
-        {/* <Box
-          zIndex={9}
-          position="absolute"
-          bottom="8px"
-          right="8px"
-          height="24px"
-          borderRadius={12}
-          bg="rgba(0, 0, 0, 0.7)"
-          textAlign="center"
-          padding="0 10px"
-          color="#000000"
-        >
-          <img src={Graph} />
-          
-        </Box> */}
         <Box
           width="30%"
           height="2px"
