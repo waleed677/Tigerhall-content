@@ -11,10 +11,6 @@ export interface IContentCardData extends IContentImage {
   timeSpentOnByUser: number;
 }
 
-export interface IContentCategory {
-  name: string;
-}
-
 export interface IContentExpert {
   firstName: string;
   lastName: string;
@@ -22,16 +18,15 @@ export interface IContentExpert {
   title: string;
 }
 
-export interface IContentCard
-  extends IContentCategory,
-    IContentExpert,
-    IContentImage {
+export interface IContentCard extends IContentExpert, IContentImage {
   name: string;
   id: number;
   publishedAt: Date;
   timeSpentOnByUser: number;
   podcastLength: number;
   image: IContentCardData;
-  categories: [IContentCategory];
+  categories: {
+    name: string;
+  }[];
   experts: [IContentExpert];
 }

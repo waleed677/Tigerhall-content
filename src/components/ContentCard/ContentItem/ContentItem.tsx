@@ -1,6 +1,6 @@
 import { Card } from "@chakra-ui/react";
 import React from "react";
-import CardImage from "../CardImage";
+import CardImage from "../CardHeader";
 import { IContentCard } from "../../../interfaces/content.interface";
 import { IContentCardData } from "../../../interfaces/content.interface";
 
