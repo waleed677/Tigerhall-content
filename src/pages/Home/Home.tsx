@@ -10,13 +10,12 @@ import ContentList from "../../components/ContentCard/ContentList";
 
 const Home = () => {
   const [keyword, setKeyword] = useState("");
-  const [clearInput, setClearInput] = useState(false);
   const { loading, error, data } = useQuery(GET_CONTENT_CARDS, {
     variables: { keyword },
   });
 
   const { edges } = data?.contentCards || {};
-
+  console.log({ edges });
   const handleSearchQuery = useCallback((value: string) => {
     setKeyword(value);
   }, []);

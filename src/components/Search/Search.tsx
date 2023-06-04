@@ -8,11 +8,11 @@ import {
 } from "@chakra-ui/react";
 import { useState, useCallback, ChangeEvent } from "react";
 
-interface propsSearchData {
+interface ISearchData {
   onSearch: (searchTerm: string) => void;
 }
 
-const Search = ({ onSearch }: propsSearchData) => {
+const Search = ({ onSearch }: ISearchData) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchData = useCallback((e: ChangeEvent<HTMLInputElement>) => {
@@ -45,7 +45,10 @@ const Search = ({ onSearch }: propsSearchData) => {
             <SmallCloseIcon
               color="white"
               mt={2}
-              onClick={() => setSearchTerm("")}
+              onClick={() => {
+                setSearchTerm("");
+                onSearch("");
+              }}
             />
           </InputRightElement>
         )}

@@ -7,6 +7,9 @@ export const GET_CONTENT_CARDS = gql`
         ... on Podcast {
           id
           name
+          length
+          timeSpentOnByUsers
+          publishedAt
           image {
             ...Image
           }

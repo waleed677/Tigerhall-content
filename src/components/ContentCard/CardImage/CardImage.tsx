@@ -2,18 +2,17 @@ import { Box, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 
 import Graph from "../../../../public/assets/images/graph.svg";
+import ContentPublishedTime from "../ContentPublishedTime";
+import { IContentCard } from "../../../interfaces/content.interface";
 
-interface propsCardImage {
-  imageURL: string;
+interface ICardImage {
+  imageURL: IContentCard;
 }
 
-const CardImage = ({ imageURL }: propsCardImage) => {
-  const url = new URL(imageURL);
+const CardImage = ({ imageURL }: ICardImage) => {
+  const url = new URL(imageURL.image.uri);
   const imageTextInject = "resize/250x";
   const { host, pathname } = url;
-
-  console.log(host);
-  console.log(pathname);
 
   return (
     <>
@@ -51,7 +50,7 @@ const CardImage = ({ imageURL }: propsCardImage) => {
           left="8px"
           height="24px"
           width="24px"
-          borderRadius="99px"
+          borderRadius="3xl"
           bg="orange.600"
           textAlign="center"
         ></Box>
@@ -67,9 +66,7 @@ const CardImage = ({ imageURL }: propsCardImage) => {
           padding="0 10px"
         >
           <Box display="flex" alignItems="center" justifyContent="center">
-            <Text size="xs" ml="4px" color="white" fontWeight="700">
-              20 m
-            </Text>
+            <ContentPublishedTime />
           </Box>
         </Box>
         <Box
@@ -78,7 +75,6 @@ const CardImage = ({ imageURL }: propsCardImage) => {
           bg="orange.600"
           position="absolute"
           bottom="-2px"
-          left="0"
           zIndex={3}
         />
         <Box

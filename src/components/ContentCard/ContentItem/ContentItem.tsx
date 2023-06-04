@@ -1,28 +1,14 @@
 import { Card } from "@chakra-ui/react";
 import React from "react";
 import CardImage from "../CardImage";
+import { IContentCard } from "../../../interfaces/content.interface";
+import { IContentCardData } from "../../../interfaces/content.interface";
 
-interface Content {
-  name: string;
-  image: {
-    uri: string;
-  };
-  categories: {
-    name: string;
-  }[];
-  experts: {
-    firstName: string;
-    lastName: string;
-    title: string;
-    company: string;
-  }[];
+interface IContentItem {
+  content: IContentCard;
 }
 
-interface propsContentItem {
-  content: Content;
-}
-
-const ContentItem = ({ content }: propsContentItem) => {
+const ContentItem = ({ content }: IContentItem) => {
   return (
     <>
       <Card
@@ -33,7 +19,7 @@ const ContentItem = ({ content }: propsContentItem) => {
         width="100%"
         mb={6}
       >
-        <CardImage imageURL={content.image.uri} />
+        <CardImage imageURL={content} />
       </Card>
     </>
   );

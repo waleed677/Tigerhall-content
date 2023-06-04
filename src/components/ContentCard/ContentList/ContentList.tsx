@@ -1,29 +1,13 @@
 import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
 import ContentItem from "../ContentItem";
+import { IContentCard } from "../../../interfaces/content.interface";
 
-interface Content {
-  name: string;
-  id: number;
-  image: {
-    uri: string;
-  };
-  categories: {
-    name: string;
-  }[];
-  experts: {
-    firstName: string;
-    lastName: string;
-    title: string;
-    company: string;
-  }[];
+interface IContentList {
+  contentCards: IContentCard[];
 }
 
-interface propsContentList {
-  contentCards: Content[];
-}
-
-const ContentList = ({ contentCards }: propsContentList) => {
+const ContentList = ({ contentCards }: IContentList) => {
   return (
     <>
       <Box>
@@ -32,7 +16,7 @@ const ContentList = ({ contentCards }: propsContentList) => {
           justifyContent="center"
           flexDirection="column"
         >
-          {contentCards?.map((item: Content) => (
+          {contentCards?.map((item: IContentCard) => (
             <ContentItem key={item.id} content={item} />
           ))}
         </Flex>
