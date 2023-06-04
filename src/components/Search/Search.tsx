@@ -1,5 +1,11 @@
-import { Search2Icon } from "@chakra-ui/icons";
-import { Input, InputLeftElement, InputGroup, Spinner } from "@chakra-ui/react";
+import { Search2Icon, SmallCloseIcon } from "@chakra-ui/icons";
+import {
+  Input,
+  InputLeftElement,
+  InputGroup,
+  Spinner,
+  InputRightElement,
+} from "@chakra-ui/react";
 import { useState, useCallback, ChangeEvent } from "react";
 
 interface propsSearchData {
@@ -7,7 +13,10 @@ interface propsSearchData {
 }
 
 const Search = ({ onSearch }: propsSearchData) => {
+  const [searchTerm, setSearchTerm] = useState("");
+
   const handleSearchData = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
     onSearch(e.target.value);
   }, []);
 
@@ -18,6 +27,7 @@ const Search = ({ onSearch }: propsSearchData) => {
           <Search2Icon color="white" mt={2} />
         </InputLeftElement>
         <Input
+          value={searchTerm}
           type="text"
           size="lg"
           placeholder=""
@@ -30,6 +40,15 @@ const Search = ({ onSearch }: propsSearchData) => {
           color="white"
           onChange={handleSearchData}
         />
+        {searchTerm.length > 0 && (
+          <InputRightElement>
+            <SmallCloseIcon
+              color="white"
+              mt={2}
+              onClick={() => setSearchTerm("")}
+            />
+          </InputRightElement>
+        )}
       </InputGroup>
     </>
   );

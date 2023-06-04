@@ -10,6 +10,7 @@ import ContentList from "../../components/ContentList";
 
 const Home = () => {
   const [keyword, setKeyword] = useState("");
+  const [clearInput, setClearInput] = useState(false);
   const { loading, error, data } = useQuery(GET_CONTENT_CARDS, {
     variables: { keyword },
   });
