@@ -1,6 +1,7 @@
-import { Box, Icon, Text } from "@chakra-ui/react";
+import { Box, Icon, Text, Flex, Img } from "@chakra-ui/react";
 
 import Graph from "../../../../public/assets/images/graph.svg";
+import Headphone from "../../../../public/assets/images/headphone.svg";
 import ContentPublishedTime from "../ContentPublishedTime";
 import { IContentCardData } from "../../../interfaces/content.interface";
 
@@ -42,17 +43,20 @@ const CardImage = ({ imageURL }: ICardImage) => {
             </Text>
           </Box>
         </Box>
-        <Box
-          zIndex={9}
+
+        <Flex
           position="absolute"
           bottom="8px"
           left="8px"
           height="24px"
           width="24px"
-          borderRadius="3xl"
-          bg="orange.600"
-          textAlign="center"
-        ></Box>
+          color="white"
+          p="5px"
+          bgColor="orange.600"
+          borderRadius="100%"
+        >
+          <Img src={Headphone} />
+        </Flex>
 
         {/* Publish Time Component */}
         <ContentPublishedTime publishedAt={imageURL.publishedAt} />

@@ -32,8 +32,8 @@ const ContentPublishedTime = ({ publishedAt }: IContentPublishedTime) => {
         m="0 8px 8px 0"
         p="5px 14px"
         color="white"
-        bgColor="rgba(0, 0, 0, 0.7)"
-        borderRadius={100}
+        bg="rgba(0, 0, 0, 0.7)"
+        borderRadius="3xl"
         gap={1}
       >
         <Img src={Clock} mt={0.5} />
