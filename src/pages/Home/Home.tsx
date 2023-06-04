@@ -19,10 +19,7 @@ const Home = () => {
     setKeyword(value);
   }, []);
 
-  // Debounce the search term changes with a 300ms delay and cache the output
-  const debouncedSearch = useMemo(() => {
-    return debounce(handleSearchQuery, 300);
-  }, []);
+  const debouceSearch = debounce(handleSearchQuery, 300);
 
   return (
     <section>
