@@ -1,12 +1,11 @@
 import { Box, Icon, Text } from "@chakra-ui/react";
-import React from "react";
 
 import Graph from "../../../../public/assets/images/graph.svg";
 import ContentPublishedTime from "../ContentPublishedTime";
-import { IContentCard } from "../../../interfaces/content.interface";
+import { IContentCardData } from "../../../interfaces/content.interface";
 
 interface ICardImage {
-  imageURL: IContentCard;
+  imageURL: IContentCardData;
 }
 
 const CardImage = ({ imageURL }: ICardImage) => {
@@ -54,21 +53,22 @@ const CardImage = ({ imageURL }: ICardImage) => {
           bg="orange.600"
           textAlign="center"
         ></Box>
-        <Box
+        <ContentPublishedTime publishedAt={imageURL.publishedAt} />
+        {/* <Box
           zIndex={9}
           position="absolute"
           bottom="8px"
           right="8px"
           height="24px"
-          borderRadius="50px"
-          bg="gray.700"
+          borderRadius={12}
+          bg="rgba(0, 0, 0, 0.7)"
           textAlign="center"
           padding="0 10px"
+          color="#000000"
         >
-          <Box display="flex" alignItems="center" justifyContent="center">
-            <ContentPublishedTime />
-          </Box>
-        </Box>
+          <img src={Graph} />
+          
+        </Box> */}
         <Box
           width="30%"
           height="2px"
