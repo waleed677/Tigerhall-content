@@ -1,4 +1,6 @@
+import { Card } from "@chakra-ui/react";
 import React from "react";
+import CardImage from "../CardImage";
 
 interface Content {
   name: string;
@@ -21,7 +23,20 @@ interface propsContentItem {
 }
 
 const ContentItem = ({ content }: propsContentItem) => {
-  return <div>{content.name}</div>;
+  return (
+    <>
+      <Card
+        maxW="sm"
+        borderRadius="8px"
+        height="272px"
+        mx="auto"
+        width="100%"
+        mb={6}
+      >
+        <CardImage imageURL={content.image.uri} />
+      </Card>
+    </>
+  );
 };
 
 export default ContentItem;

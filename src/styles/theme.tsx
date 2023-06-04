@@ -12,9 +12,12 @@ const theme = extendTheme({
     body: `NeueMontreal-Regular,`,
   },
   colors: {
-    brand: {
+    gray: {
       700: "#797670",
       900: "#383733",
+    },
+    orange: {
+      50: "#FFF9F6",
     },
   },
 });

@@ -22,7 +22,7 @@ const Search = ({ onSearch }: propsSearchData) => {
 
   return (
     <>
-      <InputGroup bg="brand.900" borderRadius={10} mb={6}>
+      <InputGroup bg="gray.900" borderRadius={10} mb={6}>
         <InputLeftElement>
           <Search2Icon color="white" mt={2} />
         </InputLeftElement>
@@ -34,9 +34,9 @@ const Search = ({ onSearch }: propsSearchData) => {
           borderRadius={10}
           borderWidth={1}
           borderStyle="solid"
-          borderColor="brand.700"
-          focusBorderColor="brand.700"
-          borderLeftColor="brand.700"
+          borderColor="gray.700"
+          focusBorderColor="gray.700"
+          borderLeftColor="gray.700"
           color="white"
           onChange={handleSearchData}
         />
