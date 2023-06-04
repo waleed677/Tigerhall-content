@@ -1,15 +1,15 @@
-// import Search from "./components/Search";
+import { render, screen, fireEvent } from "@testing-library/react";
+import Search from "./components/Search";
 
-// describe("Search component", () => {
-//   test("should call onSearch when typing in the input field", () => {
-//     const mockOnSearch = jest.fn();
-//     const { getByPlaceholderText } = render(<Search onSearch={mockOnSearch} />);
-//     const input = getByPlaceholderText("Enter search term");
+describe("Search component", () => {
+  test("should call onSearch when typing in the input field", () => {
+    const mockOnSearch = jest.fn();
+    render(<Search onSearch={mockOnSearch} />);
+    const input = screen.getByPlaceholderText("Enter search term");
 
-//     fireEvent.change(input, { target: { value: "example" } });
-//     expect(mockOnSearch).toHaveBeenCalledTimes(1);
-//     expect(mockOnSearch).toHaveBeenCalledWith("example");
-//   });
+    fireEvent.change(input, { target: { value: "podcast" } });
 
-//   // Add more test cases as needed
-// });
+    expect(mockOnSearch).toHaveBeenCalledTimes(1);
+    expect(mockOnSearch).toHaveBeenCalledWith("podcast");
+  });
+});
