@@ -7,7 +7,7 @@ interface propsAlertError {
 
 const ErrorAlert = ({ message }: propsAlertError) => {
   return (
-    <Alert mt={10} status="error">
+    <Alert mt={10} status="error" borderRadius={2}>
       {message}
     </Alert>
   );

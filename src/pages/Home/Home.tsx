@@ -6,6 +6,7 @@ import { useQuery } from "@apollo/client";
 import { GET_CONTENT_CARDS } from "../../queries/query";
 import Loader from "../../components/Loader";
 import ErrorAlert from "../../components/ErrorAlert";
+import ContentList from "../../components/ContentList";
 
 const Home = () => {
   const [keyword, setKeyword] = useState("");
@@ -31,6 +32,9 @@ const Home = () => {
 
       {/* Show Loader */}
       {loading && <Loader />}
+
+      {/* Show Content List Fetched from API */}
+      {!loading && edges.length > 0 && <ContentList contentCards={edges} />}
 
       {/* No Data Found */}
       {!loading && edges.length === 0 && <ErrorAlert message="No Data Found" />}
