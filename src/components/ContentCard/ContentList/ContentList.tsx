@@ -9,7 +9,7 @@ interface IContentList {
 
 const ContentList = ({ contentCards }: IContentList) => {
   return (
-    <>
+    <article>
       <Box>
         <Flex
           minWidth="max-content"
@@ -21,7 +21,7 @@ const ContentList = ({ contentCards }: IContentList) => {
           ))}
         </Flex>
       </Box>
-    </>
+    </article>
   );
 };
 

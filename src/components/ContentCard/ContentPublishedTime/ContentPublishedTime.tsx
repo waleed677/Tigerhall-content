@@ -25,24 +25,22 @@ const ContentPublishedTime = ({ publishedAt }: IContentPublishedTime) => {
     formattedTime = `${days}d`;
   }
   return (
-    <>
-      <Flex
-        position="absolute"
-        bottom={0}
-        right={0}
-        m="0 8px 8px 0"
-        p="5px 14px"
-        color="white"
-        bg="rgba(0, 0, 0, 0.7)"
-        borderRadius="3xl"
-        gap={1}
-      >
-        <Img src={Clock} mt={0.5} />
-        <Text fontSize={12} mx="auto" color="white" fontWeight="700">
-          {formattedTime}
-        </Text>
-      </Flex>
-    </>
+    <Flex
+      position="absolute"
+      bottom={0}
+      right={0}
+      m="0 8px 8px 0"
+      p="5px 14px"
+      color="white"
+      bg="rgba(0, 0, 0, 0.7)"
+      borderRadius="3xl"
+      gap={1}
+    >
+      <Img src={Clock} mt={0.5} />
+      <Text fontSize={12} mx="auto" color="white" fontWeight="700">
+        {formattedTime}
+      </Text>
+    </Flex>
   );
 };
 

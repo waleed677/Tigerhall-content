@@ -21,7 +21,7 @@ const Search = ({ onSearch }: ISearchData) => {
   }, []);
 
   return (
-    <>
+    <article>
       <InputGroup bg="gray.900" borderRadius={10} mb={6}>
         <InputLeftElement>
           <Search2Icon color="white" mt={2} />
@@ -53,7 +53,7 @@ const Search = ({ onSearch }: ISearchData) => {
           </InputRightElement>
         )}
       </InputGroup>
-    </>
+    </article>
   );
 };
 

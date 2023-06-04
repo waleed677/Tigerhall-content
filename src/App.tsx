@@ -14,7 +14,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <ApolloProvider client={client}>
-        <Container as="main" maxWidth="sm" pt={6} pl={12} pr={12} mx="auto">
+        <Container maxWidth="sm" pt={6} pl={12} pr={12} mx="auto">
           <Home />
         </Container>
       </ApolloProvider>

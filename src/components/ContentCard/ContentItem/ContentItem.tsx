@@ -11,7 +11,7 @@ interface IContentItem {
 
 const ContentItem = ({ content }: IContentItem) => {
   return (
-    <>
+    <article>
       <Card
         maxW="sm"
         borderRadius="8px"
@@ -29,7 +29,7 @@ const ContentItem = ({ content }: IContentItem) => {
           </Flex>
         </CardFooter>
       </Card>
-    </>
+    </article>
   );
 };
 

@@ -25,7 +25,7 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <section>
       <Search onSearch={handleSearchQuery} />
 
       {/* Show Loader */}
@@ -43,7 +43,7 @@ const Home = () => {
       {!loading && error && (
         <ErrorAlert message="Sorry, There is something wrong with your API call" />
       )}
-    </>
+    </section>
   );
 };
 
