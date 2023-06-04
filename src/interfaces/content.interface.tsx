@@ -1,5 +1,3 @@
-// content.ts
-
 export interface IContentImage {
   uri: string;
 }

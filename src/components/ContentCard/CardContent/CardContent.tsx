@@ -1,4 +1,3 @@
-import React from "react";
 import { IContentCard } from "../../../interfaces/content.interface";
 import { CardBody, Stack, Text, Heading } from "@chakra-ui/react";
 

@@ -1,5 +1,4 @@
 import { Box, Flex } from "@chakra-ui/react";
-import React from "react";
 import ContentItem from "../ContentItem";
 import { IContentCard } from "../../../interfaces/content.interface";
 
