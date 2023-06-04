@@ -1,6 +1,6 @@
 import { Box, Icon, Text, Flex, Img } from "@chakra-ui/react";
-import Graph from "../../../../public/assets/images/graph.svg";
-import Headphone from "../../../../public/assets/images/headphone.svg";
+import Graph from "../../../assets/images/graph.svg";
+import Headphone from "../../../assets/images/headphone.svg";
 import ContentPublishedTime from "../ContentPublishedTime";
 import { IContentCardData } from "../../../interfaces/content.interface";
 

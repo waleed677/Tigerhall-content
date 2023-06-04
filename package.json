@@ -14,7 +14,9 @@
     "@chakra-ui/react": "^2.7.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@types/jest": "^29.5.2",
     "@types/lodash": "^4.14.195",
+    "@types/node": "^20.2.5",
     "framer-motion": "^10.12.16",
     "graphql": "^16.6.0",
     "lodash": "^4.17.21",
@@ -23,6 +25,7 @@
     "react-query": "^3.39.3"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",

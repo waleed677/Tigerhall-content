@@ -2,8 +2,8 @@ import { Card, CardFooter, ButtonGroup, Img, Flex } from "@chakra-ui/react";
 import CardHeader from "../CardHeader";
 import { IContentCard } from "../../../interfaces/content.interface";
 import CardContent from "../CardContent/CardContent";
-import Bookmark from "../../../../public/assets/images/bookmark.svg";
-import Share from "../../../../public/assets/images/share.svg";
+import Bookmark from "../../../assets/images/bookmark.svg";
+import Share from "../../../assets/images/share.svg";
 
 interface IContentItem {
   content: IContentCard;
