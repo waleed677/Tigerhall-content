@@ -2,6 +2,7 @@ import { Flex, Img, Text } from "@chakra-ui/react";
 import React from "react";
 import { IContentCardData } from "../../../interfaces/content.interface";
 import Clock from "../../../../public/assets/images/clock.svg";
+
 interface IContentPublishedTime {
   publishedAt: Date;
 }

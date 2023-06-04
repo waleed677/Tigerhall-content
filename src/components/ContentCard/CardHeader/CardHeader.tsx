@@ -9,7 +9,7 @@ interface ICardImage {
   imageURL: IContentCardData;
 }
 
-const CardImage = ({ imageURL }: ICardImage) => {
+const CardHeader = ({ imageURL }: ICardImage) => {
   const url = new URL(imageURL.image.uri);
   const imageTextInject = "resize/250x";
   const { host, pathname } = url;
@@ -82,4 +82,4 @@ const CardImage = ({ imageURL }: ICardImage) => {
   );
 };
 
-export default CardImage;
+export default CardHeader;

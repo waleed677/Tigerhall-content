@@ -1,8 +1,9 @@
-import { Card } from "@chakra-ui/react";
-import React from "react";
-import CardImage from "../CardHeader";
+import { Card, CardFooter, ButtonGroup, Img, Flex } from "@chakra-ui/react";
+import CardHeader from "../CardHeader";
 import { IContentCard } from "../../../interfaces/content.interface";
-import { IContentCardData } from "../../../interfaces/content.interface";
+import CardContent from "../CardContent/CardContent";
+import Bookmark from "../../../../public/assets/images/bookmark.svg";
+import Share from "../../../../public/assets/images/share.svg";
 
 interface IContentItem {
   content: IContentCard;
@@ -19,7 +20,14 @@ const ContentItem = ({ content }: IContentItem) => {
         width="100%"
         mb={6}
       >
-        <CardImage imageURL={content} />
+        <CardHeader imageURL={content} />
+        <CardContent content={content} />
+        <CardFooter>
+          <Flex gap="4" ml="auto">
+            <Img src={Share} />
+            <Img src={Bookmark} />
+          </Flex>
+        </CardFooter>
       </Card>
     </>
   );

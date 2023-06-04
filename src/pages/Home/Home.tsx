@@ -15,7 +15,6 @@ const Home = () => {
   });
 
   const { edges } = data?.contentCards || {};
-  console.log({ edges });
   const handleSearchQuery = useCallback((value: string) => {
     setKeyword(value);
   }, []);
